@@ -1,0 +1,224 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2vw auto;
+    box-shadow: 0 2px 2px #ccc;
+    border-bottom: 1px solid black;
+}
+
+/* Cabecera */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px #ccc;
+}
+
+.logo {
+    width: 50%;
+    flex-grow: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: 1000;
+    font-size: 2vw;
+}
+
+#menu {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    
+}
+#menu ul{
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+}
+#menu li {
+    margin: 0 50px; 
+}
+#menu a {
+    font-size: 1.5vw;
+    transition: all 300ms;
+    text-decoration: none;
+    color: black;
+
+}
+
+#menu a:hover {
+   background-color: lightgray;
+   color: #fff;
+   
+}
+
+/* Contenido Principal */
+#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#content aside {
+    display: flex;
+    width: 15%;
+    flex-direction: column;
+    padding: 10px;
+    
+}
+#content aside ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+#content aside li{
+    margin: 20px 0;
+    width: 100%;
+}
+#content aside a {
+    display: block;
+    padding: 15px;
+    background-color: #EEEEEE;
+    text-align: center;
+    transition: all 300ms;
+    text-decoration: none;
+    color: black;
+
+}
+
+#content aside a:hover {
+    background-color: darkgray;
+}
+#content aside h2{
+    border-bottom: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+/* Proyectos */
+#projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project {
+    width: 20%;
+    margin: 1vw;
+    border: 1px solid lightgray;
+    box-shadow: 0 2px 4px gray;
+    transition: color 300ms, transform 300ms;
+}
+
+.project:hover {
+    color: green;
+    transform: scale(1.05);
+}
+
+.project img {
+    width: 100%;
+    transition: transform 300ms;
+}
+.project a{
+    text-decoration: none;
+    color: black;
+}
+.project {
+
+    color: gray;
+}
+.project:hover img {
+    transform: scale(1.05);
+}
+.project-info{
+    display: block;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    box-shadow: 0 -2px 4px #ccc;
+    padding:1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+footer .logo {
+    opacity: 0.5;
+    text-align: right;
+}
+
+footer .info {
+    text-align: left;
+    flex: 1;
+}
+
+/* Media Queries para Pantallas Pequeñas */
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+    }
+
+    #menu {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    #content {
+        flex-direction: column;
+    }
+
+    #projects {
+        justify-content: center;
+    }
+
+    .project {
+        width: 45%;
+        margin-bottom: 2vw;
+    }
+
+    #content aside {
+        width: 100%;
+        margin-bottom: 2vw;
+    }
+}
+
+/* Media Queries para Pantallas Muy Pequeñas (móviles) */
+@media (max-width: 500px) {
+    .project {
+        width: 90%;
+    }
+
+    .logo {
+        font-size: 4vw;
+    }
+
+    #menu a {
+        font-size: 2vw; 
+    }
+
+    #menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .info {
+        text-align: center;
+        margin-top: 10vw;
+    }
+}
